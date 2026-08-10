@@ -1,0 +1,21 @@
+
+import { Link } from 'react-router-dom'
+export default function Footer(){
+  return (
+    <footer className="bg-[#081714] text-white mt-24">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-8 py-16 grid md:grid-cols-4 gap-10">
+        <div>
+          <div className="flex items-center gap-2.5">
+            <div className="h-9 w-9 rounded-full bg-white text-[#081714] grid place-items-center font-serif font-bold">EP</div>
+            <div className="leading-[0.9]"><div className="font-black text-[13px]">ELITE PRIMA</div><div className="text-[#B78A4A] text-[9px] tracking-[0.28em] font-black">HOMES LTD</div></div>
+          </div>
+          <p className="mt-4 text-white/50 text-sm leading-6 max-w-[30ch]">Elite PriMa Homes Ltd — quieter, more personal real estate across Accra. Verified titles, direct communication, less friction.</p>
+        </div>
+        <div><p className="text-[11px] tracking-[0.3em] uppercase font-black text-[#B78A4A]">Explore</p><div className="mt-4 grid gap-2 text-sm text-white/70"><Link to="/properties">Properties</Link><Link to="/developments">Developments</Link><Link to="/agents">Agents</Link></div></div>
+        <div><p className="text-[11px] tracking-[0.3em] uppercase font-black text-[#B78A4A]">Company</p><div className="mt-4 grid gap-2 text-sm text-white/70"><Link to="/about">About</Link><Link to="/careers">Careers</Link><Link to="/contact">Contact</Link></div></div>
+        <div><p className="text-[11px] tracking-[0.3em] uppercase font-black text-[#B78A4A]">Get in touch</p><p className="mt-4 text-sm text-white/70">Lakeside Estate, Accra<br/>+233 24 123 4567<br/>hello@eliteprimahomes.com</p></div>
+      </div>
+      <div className="border-t border-white/10 py-6 text-center text-[11px] tracking-[0.2em] uppercase text-white/30">© 2026 Elite PriMa Homes Ltd — Accra, Ghana</div>
+    </footer>
+  )
+}

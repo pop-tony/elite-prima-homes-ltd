@@ -1,0 +1,3 @@
+export default function ManagementPage(){
+  return <div className="mx-auto max-w-[1400px] px-6 md:px-8 py-16"><h1 className="serif text-5xl">Property Management</h1><p className="mt-4 max-w-2xl text-brick-muted">For landlords & diaspora — 10% monthly. Rent collection, maintenance, and WhatsApp reporting.</p><div className="mt-8 rounded-[24px] bg-brick-black text-white p-8"><p className="text-brick-gold text-[11px] uppercase tracking-widest font-bold">Elite PriMa Promise</p><p className="serif text-2xl mt-3">We manage like owners, not agents.</p></div></div>
+}

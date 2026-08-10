@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brick-white: #FFFFFF;
+  --color-brick-offwhite: #F6F1E8;
+  --color-brick-black: #081714;
+  --color-brick-charcoal: #1C1C1C;
+  --color-brick-gold: #B78A4A;
+  --color-brick-gold-light: #D7B98A;
+  --color-brick-card: #FFFFFF;
+  --color-brick-subtle: #E9E0D0;
+  --color-brick-muted: #8A8378;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-luxe: 0 25px 60px -15px rgba(8,23,20,0.15);
+}
+
+@layer base {
+  html, body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background: var(--color-brick-offwhite);
+    color: var(--color-brick-charcoal);
+  }
+  h1,h2,h3,h4 { font-family: var(--font-serif); letter-spacing: -0.03em; color: var(--color-brick-black); }
+  .hide-scrollbar::-webkit-scrollbar{display:none} .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+}
+
+@layer utilities {
+  .serif{font-family:var(--font-serif)} 
+  .transition-luxe{transition:all 0.5s var(--ease-luxe)}
+  .shadow-luxe{box-shadow:var(--shadow-luxe)}
+  .text-gradient-gold{background:linear-gradient(90deg,#B78A4A,#D7B98A);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+}
