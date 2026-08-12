@@ -23,7 +23,7 @@ export default function App(){
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <div className="flex min-h-screen flex-col bg-brick-offwhite text-brick-charcoal">
+        <div className="flex min-h-screen flex-col bg-brick-offwhite text-brick-charcoal transition-colors dark:bg-brick-black dark:text-white">
           <Navbar/>
           <main className="flex-1">
             <Routes>
