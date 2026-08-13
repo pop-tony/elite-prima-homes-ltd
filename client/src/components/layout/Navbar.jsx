@@ -21,7 +21,7 @@ export default function Navbar(){
     <header className="sticky top-0 z-50 border-b border-brick-subtle/50 bg-brick-offwhite/80 backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-brick-black/80">
       <div className="mx-auto max-w-[1400px] px-6 md:px-8 h-[72px] flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-full bg-brick-black text-white grid place-items-center font-serif text-[15px] font-bold">EP</div>
+          <div className={`h-9 w-9 rounded-full grid place-items-center font-serif text-[15px] font-bold ${isDark? 'bg-white text-brick-black' : 'bg-brick-black text-white'}`}>EP</div>
           <div className="leading-[0.9]">
             <div className="font-black tracking-[-0.02em] text-[13px] text-brick-black dark:text-white">ELITE PRIMA</div>
             <div className="text-brick-gold text-[9px] tracking-[0.28em] font-black">HOMES LTD</div>

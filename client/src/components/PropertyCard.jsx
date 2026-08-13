@@ -14,8 +14,8 @@ export default function PropertyCard({ property }){
         <div className="relative aspect-[4/3] overflow-hidden bg-[#0A2342]">
           {images?.[0] ? <img src={images[0]} alt={title} className="h-full w-full object-cover group-hover:scale-[1.05] transition-transform duration-700" /> : <div className="h-full w-full flex items-center justify-center text-white/20">No Image</div>}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-          <div className="absolute left-3 top-3 flex gap-2"><span className="bg-white px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-[#0A2342] shadow">{status}</span>{verified && <span className="bg-emerald-500 px-3 py-1.5 rounded-full text-[10px] font-black uppercase text-white">Titled</span>}</div>
-          <button onClick={(e)=>{e.preventDefault(); setSaved(!saved)}} className="absolute right-3 top-3 h-9 w-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center hover:bg-white shadow"><Bookmark className={`h-4 w-4 ${saved?'fill-[#FF6A00] text-[#FF6A00]':'text-[#0A2342]'}`} /></button>
+          <div className="absolute left-3 top-3 flex gap-2"><span className={`${isDark? 'bg-white/5 text-white' : 'bg-white px-3 py-1.5'} rounded-full text-[10px] font-black uppercase tracking-widest text-[#0A2342] shadow`}>{status}</span>{verified && <span className="bg-emerald-500 px-3 py-1.5 rounded-full text-[10px] font-black uppercase text-white">Titled</span>}</div>
+          <button onClick={(e)=>{e.preventDefault(); setSaved(!saved)}} className={`${isDark? 'absolute right-3 top-3 h-9 w-9 bg-white/10 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/20 shadow' : 'absolute right-3 top-3 h-9 w-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center hover:bg-white shadow'}`}><Bookmark className={`h-4 w-4 ${saved?'fill-[#FF6A00] text-[#FF6A00]':'text-[#0A2342]'}`} /></button>
           <div className="absolute bottom-0 left-0 right-0 p-4"><p className="font-black text-xl text-white">GHS {price?.toLocaleString()}</p></div>
         </div>
       </Link>

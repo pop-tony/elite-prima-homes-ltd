@@ -1,1 +1,11 @@
-export default function TermsPage(){ return <div className="mx-auto max-w-[1400px] px-6 md:px-8 py-16"><h1 className="serif text-4xl">Terms</h1><p className="mt-4 max-w-2xl text-sm leading-6 text-brick-muted">By using Elite PriMa Homes Ltd website, you agree to our listing and viewing terms.</p></div> }
+import { useTheme } from '../context/ThemeContext'
+
+export default function TermsPage(){
+	const { isDark } = useTheme()
+	return (
+		<div className="mx-auto max-w-[1400px] px-6 md:px-8 py-16">
+			<h1 className="serif text-4xl">Terms</h1>
+			<p className="mt-4 max-w-2xl text-sm leading-6 text-brick-muted">By using Elite PriMa Homes Ltd website, you agree to our listing and viewing terms.</p>
+		</div>
+	)
+}

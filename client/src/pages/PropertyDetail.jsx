@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { properties } from '../lib/mockData'
 import ScheduleViewing from '../components/property/ScheduleViewing'
 import { MapPin, Bed, Bath, ArrowLeft } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
 
 export default function PropertyDetail(){
   const {id}=useParams()
@@ -22,10 +23,21 @@ export default function PropertyDetail(){
           </div>
         </div>
         <div className="grid gap-6 self-start">
-          <div className="rounded-[24px] bg-white border border-black/5 p-6"><div className="text-[11px] uppercase tracking-widest text-brick-muted">Price</div><div className="serif text-3xl mt-2">{property.price}</div><div className="mt-2 text-xs text-brick-muted">{property.tag} • {property.status}</div></div>
+          <PriceBox property={property} />
           <ScheduleViewing property={property}/>
         </div>
       </div>
+    </div>
+  )
+}
+
+function PriceBox({property}){
+  const { isDark } = useTheme()
+  return (
+    <div className={`rounded-[24px] p-6 border ${isDark? 'bg-[#071726] border-white/10 text-white' : 'bg-white border-black/5'}`}>
+      <div className="text-[11px] uppercase tracking-widest text-brick-muted">Price</div>
+      <div className="serif text-3xl mt-2">{property.price}</div>
+      <div className="mt-2 text-xs text-brick-muted">{property.tag} • {property.status}</div>
     </div>
   )
 }
