@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import WhatsAppCTA from './components/layout/WhatsAppCTA'
+import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import PropertiesPage from './pages/PropertiesPage'
 import PropertyDetail from './pages/PropertyDetail'
@@ -23,6 +24,7 @@ export default function App(){
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <div className="flex min-h-screen flex-col bg-brick-offwhite text-brick-charcoal transition-colors dark:bg-brick-black dark:text-white">
           <Navbar/>
           <main className="flex-1">
