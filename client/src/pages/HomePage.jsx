@@ -29,7 +29,7 @@ export default function HomePage(){
       <TrustBar/>
       <section className="mx-auto max-w-[1400px] px-6 md:px-8 py-16 md:py-24">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-start">
-          <div className="rounded-[32px] p-8 md:p-10 border bg-white/80 border-black/5 shadow-soft sticky top-[88px]">
+          <div className="rounded-[32px] p-8 md:p-10 border bg-white/80 border-black/5 shadow-soft sm:sticky top-[88px]">
             <p className="text-brick-gold text-[11px] tracking-[0.3em] uppercase font-black mb-3">Elite PriMa Homes Ltd</p>
             <h2 className="serif text-4xl md:text-[56px] leading-[0.92] tracking-[-0.02em]">Featured properties with a quieter, more personal feel.</h2>
             <p className="mt-5 text-[15px] leading-7 text-brick-muted">Cleanly presented homes, direct communication, less friction.</p>

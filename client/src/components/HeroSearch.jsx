@@ -32,12 +32,12 @@ export default function HeroSearch(){
         <img
           src={LIGHT_BG}
           alt="light"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${isDark? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${isDark? 'opacity-0' : 'opacity-110'}`}
         />
         <img
           src={DARK_BG}
           alt="dark"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${isDark? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${isDark? 'opacity-110' : 'opacity-0'}`}
         />
 
         {/* WAS REDUCED FROM 85/80 TO 55/45 SO IMAGE SHOWS MORE */}
